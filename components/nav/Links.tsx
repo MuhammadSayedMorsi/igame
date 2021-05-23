@@ -32,6 +32,6 @@ export default function NavLinks() {
           </Link>
         );
       })}
-    </nav>
+    </nav >
   );
 }
