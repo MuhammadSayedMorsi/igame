@@ -7,10 +7,11 @@ const LinkNames = [
   { name: "Coaching", href: "coaching" },
 ];
 
-export default function NavLinks() {
+const NavLinks: React.FC = () => {
+
   const [activeLink, setActiveLink] = useState("Home")
 
-  const activeRoute = (namelink) => {
+  const activeRoute = (namelink: string) => {
     setActiveLink(namelink)
     console.log(namelink)
   }
@@ -19,14 +20,16 @@ export default function NavLinks() {
       {LinkNames.map((namelink, index) => {
         return (
           <Link
-            onClick={() => activeRoute(namelink.name)}
+
             href={namelink.href}
             key={index}
           >
             <a className={`transition duration-200 text-base mr-4 opacity-50 hover:text-white
             ${activeLink === namelink.name ? "relative text-red-700 font-bold active" : ""
 
-              }`}>
+              }`}
+              onClick={() => void activeRoute(namelink.name)}
+            >
               {namelink.name}
             </a>
           </Link>
@@ -35,3 +38,4 @@ export default function NavLinks() {
     </nav >
   );
 }
+export default NavLinks;
