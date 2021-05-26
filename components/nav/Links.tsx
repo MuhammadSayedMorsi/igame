@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
+
 const LinkNames = [
   { name: "Home", href: "/" },
   { name: "Browse game", href: "browse-game" },
@@ -7,14 +8,14 @@ const LinkNames = [
   { name: "Coaching", href: "coaching" },
 ];
 
-const NavLinks: React.FC = () => {
-
+export default function RouteLinks() {
   const [activeLink, setActiveLink] = useState("Home")
 
-  const activeRoute = (namelink: string) => {
+  // on click move the active class to another link
+  const ActivePage = (namelink: string): void => {
     setActiveLink(namelink)
-    console.log(namelink)
   }
+
   return (
     <nav className="mb-9 mt-9 ">
       {LinkNames.map((namelink, index) => {
@@ -28,7 +29,7 @@ const NavLinks: React.FC = () => {
             ${activeLink === namelink.name ? "relative text-red-700 font-bold active" : ""
 
               }`}
-              onClick={() => void activeRoute(namelink.name)}
+              onClick={() => ActivePage(namelink.name)}
             >
               {namelink.name}
             </a>
@@ -38,4 +39,4 @@ const NavLinks: React.FC = () => {
     </nav >
   );
 }
-export default NavLinks;
+

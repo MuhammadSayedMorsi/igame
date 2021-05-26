@@ -1,6 +1,6 @@
 export default function Logo() {
   return (
-    <span>
+    <span role="img" aria-label="logo">
       <svg width="103" height="26" viewBox="0 0 103 26" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5.616 4.888V0H0V4.888H5.616Z" fill="#5337D9" />
         <path d="M5.40654 25.201V8.17969H0.171875V25.201H5.40654Z" fill="#5337D9" />

@@ -1,4 +1,9 @@
 import Head from 'next/head'
+import AvailableGames from '../components/availableGames/AvailableGames'
+import AvailableTournament from "../components/availableTournament/AvailableTournament"
+import LeftSideBar from "../components/leftSideBar/LeftSideBar"
+import RecommendedCoaching from '../components/recommendedCoaching/RecommendedCoaching'
+
 export default function Home() {
   return (
     <div>
@@ -6,9 +11,12 @@ export default function Home() {
         <title>
           IGAME
         </title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="mt-10">
+        <LeftSideBar />
+        <AvailableGames />
+        <AvailableTournament />
+        <RecommendedCoaching />
       </main>
     </div>
   )

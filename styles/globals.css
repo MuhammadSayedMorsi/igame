@@ -14,3 +14,7 @@
   left: 18px;
 
 }
+
+input[type="radio"] {
+  display: none;
+}
