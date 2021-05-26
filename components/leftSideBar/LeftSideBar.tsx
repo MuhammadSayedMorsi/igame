@@ -9,8 +9,8 @@ export default function LeftSideBar() {
   return (
     <div>
       <SearchIcon />
-      <GameIcon LogoGame={LogoGameone} />
-      <GameIcon LogoGame={LogoGametwo} />
+      <GameIcon logo={LogoGameone} />
+      <GameIcon logo={LogoGametwo} />
     </div>
   )
 }
