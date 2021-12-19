@@ -17,12 +17,6 @@ export default function Home() {
             <button className="bg-app-pink py-1 px-2 text-white font-bold text-xs rounded-md">
               Buy Sessions
             </button>
-            {/* <button className="ml-2 flex items-center text-app-basecolor font-bold text-sm">
-              <span className="mr-1 bg-black w-4 h-4 rounded-xl text-sm text-white font-bold flex items-center justify-center">
-                +
-              </span>{" "}
-              Add a Language
-            </button> */}
             <SelectLang />
           </div>
         </div>
