@@ -2,19 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.active:after {
-  content: "";
-  position: absolute;
-  top: 25px;
-  width: 7px;
-  height: 7px;
-  background: #4932B8;
-  border-radius: 100%;
-  left: 18px;
-
+.flex {
+  display: flex !important;
 }
 
-input[type="radio"] {
-  display: none;
+.slick-slide {
+  margin-right: 1rem;
+}
+.p-center {
+  transform: translate(-50%, -50%);
 }
